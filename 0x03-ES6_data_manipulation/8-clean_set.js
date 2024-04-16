@@ -4,10 +4,10 @@ export default function cleanSet(set, startString) {
   }
 
   let result = '';
-  for (let element of set) {
+  for (const element of set) {
     if (element.startsWith(startString)) {
       result += `${element.replace(startString, '')}-`;
-    } 
+    }
   }
   return result.slice(0, -1);
 }
