@@ -5,7 +5,7 @@ export default function cleanSet(set, startString) {
 
   let result = '';
   for (const element of set) {
-    if (element.startsWith(startString)) {
+    if (typeof element === 'string' && element.startsWith(startString)) {
       result += `${element.replace(startString, '')}-`;
     }
   }
