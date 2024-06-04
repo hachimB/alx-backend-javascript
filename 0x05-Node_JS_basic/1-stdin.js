@@ -9,8 +9,9 @@ console.log('Welcome to Holberton School, what is your name?');
 
 read.on('line', (input) => {
   console.log(`Your name is: ${input}`);
+  read.close();
 });
 
-read.on('SIGINT', () => {
+read.on('close', () => {
   console.log('This important software is now closing');
 });
