@@ -1,16 +1,24 @@
-const readline = require('readline');
+// const readline = require('readline');
 
-const read = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+// const read = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
 
-process.stdout.write('Welcome to Holberton School, what is your name?\n');
+// console.log('Welcome to Holberton School, what is your name?');
 
-read.on('line', (input) => {
-  process.stdout.write(`Your name is: ${input}\n`);
-});
+// read.on('line', (input) => {
+//   console.log(`Your name is: ${input}`);
+//   read.close();
+// });
 
-read.on('close', () => {
-  process.stdout.write('This important software is now closing\n');
-});
+// read.on('close', () => {
+//   console.log('This important software is now closing');
+// });
+
+const readlineSync = require('readline-sync');
+
+console.log('Welcome to Holberton School, what is your name?');
+const name = readlineSync.question();
+console.log(`Your name is: ${name}`);
+console.log('This important software is now closing');
