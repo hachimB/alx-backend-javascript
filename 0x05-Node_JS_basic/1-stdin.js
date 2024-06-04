@@ -11,6 +11,6 @@ read.on('line', (input) => {
   console.log(`Your name is: ${input}`);
 });
 
-read.on('close', () => {
+read.on('SIGINT', () => {
   console.log('This important software is now closing');
 });
