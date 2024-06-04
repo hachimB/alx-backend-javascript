@@ -20,6 +20,7 @@ const countStudents = (path) => {
       if (!fields[field]) {
         fields[field] = [];
       }
+      console.log(fields[field])
       fields[field].push(name);
     }
   }
