@@ -5,15 +5,12 @@ const read = readline.createInterface({
   output: process.stdout,
 });
 
-console.log('Welcome to Holberton School, what is your name?');
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
 read.on('line', (input) => {
-  console.log(`Your name is: ${input}`);
-  read.close();
+  process.stdout.write(`Your name is: ${input}\n`);
 });
 
-if (process.stdin.isTTY === undefined) {
-  read.on('close', () => {
-    console.log('This important software is now closing');
-  });
-}
+read.on('close', () => {
+  process.stdout.write('This important software is now closing\n');
+});
