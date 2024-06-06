@@ -12,4 +12,4 @@ function calculateNumber(type, a, b) {
     return (Math.round(a) / Math.round(b));
   }
 }
-export default calculateNumber;
+module.exports = calculateNumber;
